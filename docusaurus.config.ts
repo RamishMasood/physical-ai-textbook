@@ -120,6 +120,7 @@ const config: Config = {
       logo: {
         alt: 'Physical AI & Humanoid Robotics Textbook Logo',
         src: 'img/logo.svg',
+        href: '/docs/intro', // Link to the intro page instead of the root
       },
       items: [
         {
@@ -158,19 +159,6 @@ const config: Config = {
             {
               label: 'Docusaurus',
               href: 'https://docusaurus.io',
-            },
-          ],
-        },
-        {
-          title: 'Legal',
-          items: [
-            {
-              label: 'Privacy',
-              to: '/privacy',
-            },
-            {
-              label: 'Terms',
-              to: '/terms',
             },
           ],
         },

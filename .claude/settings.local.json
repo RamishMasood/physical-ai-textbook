@@ -16,7 +16,8 @@
       "Bash(mv docusaurus.config.ts docs/docusaurus.config.ts)",
       "Bash(mkdir -p docs foundations robotics-math control-systems ros2 sensor-fusion simulation ai-agents humanoid-robotics src/components src/pages src/css static/img static/files static/videos i18n/en i18n/ur tests/unit tests/e2e)",
       "Bash(npm install --save @docusaurus/theme-mermaid)",
-      "Bash(npm run start -- --port=3001)"
+      "Bash(npm run start -- --port=3001)",
+      "Bash(npm run build)"
     ],
     "deny": [],
     "ask": []
