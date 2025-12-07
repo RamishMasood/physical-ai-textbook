@@ -1,0 +1,87 @@
+.exerciseProblem {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background-color: var(--ifm-color-emphasis-0);
+}
+
+.exerciseProblem.easy {
+  border-left: 4px solid var(--ifm-color-success);
+}
+
+.exerciseProblem.medium {
+  border-left: 4px solid var(--ifm-color-warning);
+}
+
+.exerciseProblem.hard {
+  border-left: 4px solid var(--ifm-color-danger);
+}
+
+.problemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.problemHeader h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.difficulty {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.difficulty-easy {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--ifm-color-success);
+}
+
+.difficulty-medium {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--ifm-color-warning);
+}
+
+.difficulty-hard {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--ifm-color-danger);
+}
+
+.problemContent {
+  margin-bottom: 1rem;
+}
+
+.solutionSection {
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  padding-top: 1rem;
+}
+
+.solutionButton {
+  margin-bottom: 1rem;
+}
+
+.solutionContent {
+  padding: 1rem;
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: 0.25rem;
+}
+
+.solutionContent h5 {
+  margin-top: 0;
+  color: var(--ifm-color-primary);
+}
+
+@media (max-width: 576px) {
+  .problemHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

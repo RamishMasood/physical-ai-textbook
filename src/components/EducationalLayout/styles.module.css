@@ -1,0 +1,51 @@
+.educationalLayout {
+  max-width: 100%;
+}
+
+.header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  color: var(--ifm-color-primary);
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.content {
+  min-height: 200px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 997px) {
+  .educationalLayout {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 1.5rem;
+  }
+
+  .section {
+    margin-bottom: 1.5rem;
+  }
+}

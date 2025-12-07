@@ -1,0 +1,167 @@
+# Search API Contract
+
+## Overview
+This document defines the API contract for the search functionality of the Physical AI & Humanoid Robotics Textbook website. The search is implemented using Algolia DocSearch but we define the interface contract for consistency.
+
+## Base URL
+```
+https://physical-ai-textbook.com
+```
+
+## Endpoints
+
+### Search Content
+```
+GET /api/search
+```
+
+#### Parameters
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| query | string | Yes | Search query string |
+| locale | string | No | Language code (en, ur) - defaults to 'en' |
+| limit | number | No | Maximum number of results (1-50) - defaults to 10 |
+
+#### Request Headers
+| Header | Value |
+|--------|-------|
+| Accept | application/json |
+| Content-Type | application/json |
+
+#### Example Request
+```
+GET /api/search?query=control%20systems&locale=en&limit=20
+```
+
+#### Response Schema
+```json
+{
+  "query": "string",
+  "locale": "string",
+  "results": [
+    {
+      "title": "string",
+      "content": "string",
+      "url": "string",
+      "section": "string",
+      "module": "string",
+      "week": "string",
+      "hierarchy": {
+        "lvl0": "string",
+        "lvl1": "string",
+        "lvl2": "string",
+        "lvl3": "string"
+      },
+      "type": "lvl1 | lvl2 | lvl3 | content",
+      "score": "number"
+    }
+  ],
+  "totalHits": "number",
+  "processingTimeMS": "number"
+}
+```
+
+#### Example Response
+```json
+{
+  "query": "control systems",
+  "locale": "en",
+  "results": [
+    {
+      "title": "Introduction to Control Systems",
+      "content": "Control systems are fundamental to robotics...",
+      "url": "/docs/control-systems/introduction",
+      "section": "Introduction",
+      "module": "Control Systems",
+      "week": "Week 1",
+      "hierarchy": {
+        "lvl0": "Control Systems",
+        "lvl1": "Week 1",
+        "lvl2": "Introduction",
+        "lvl3": null
+      },
+      "type": "lvl2",
+      "score": 0.85
+    }
+  ],
+  "totalHits": 1,
+  "processingTimeMS": 15
+}
+```
+
+#### Error Responses
+- `400 Bad Request`: Invalid query parameters
+- `429 Too Many Requests`: Rate limit exceeded
+- `500 Internal Server Error`: Search service unavailable
+
+## Search Configuration API
+```
+GET /api/search/config
+```
+
+#### Response Schema
+```json
+{
+  "searchableAttributes": ["unordered(hierarchy.lvl1)", "unordered(hierarchy.lvl2)", "unordered(hierarchy.lvl3)", "content"],
+  "attributesToHighlight": ["hierarchy.lvl1", "hierarchy.lvl2", "hierarchy.lvl3", "content"],
+  "attributesToSnippet": ["content:30"],
+  "snippetEllipsisText": "…",
+  "highlightPreTag": "<mark>",
+  "highlightPostTag": "</mark>",
+  "enableSharing": true,
+  "enableInsights": false,
+  "maxResultsPerGroup": 5
+}
+```
+
+## Content Indexing API (Internal)
+```
+POST /api/search/index
+```
+
+#### Request Body
+```json
+{
+  "documents": [
+    {
+      "objectID": "string",
+      "hierarchy": {
+        "lvl0": "string",
+        "lvl1": "string",
+        "lvl2": "string",
+        "lvl3": "string"
+      },
+      "content": "string",
+      "url": "string",
+      "section": "string",
+      "module": "string",
+      "week": "string",
+      "locale": "string"
+    }
+  ]
+}
+```
+
+#### Response Schema
+```json
+{
+  "taskID": "string",
+  "addedDocuments": "number",
+  "errors": [
+    {
+      "documentID": "string",
+      "error": "string"
+    }
+  ]
+}
+```
+
+## Versioning
+This API follows semantic versioning. Breaking changes will increment the major version number.
+
+## Rate Limits
+- Unauthenticated requests: 100 requests per minute per IP
+- Authenticated requests: 1000 requests per minute per user
+
+## Authentication
+Public endpoints do not require authentication. Indexing endpoints require admin authentication via API key.

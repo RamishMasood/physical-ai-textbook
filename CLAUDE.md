@@ -208,3 +208,10 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Active Technologies
+- JavaScript/TypeScript (Node.js v18+ LTS) + Docusaurus 3.x, React 18+, MDX 2.x, Node.js package ecosystem (001-docusaurus-setup)
+- Static file-based (Markdown/MDX content files, assets in static/ directory) (001-docusaurus-setup)
+
+## Recent Changes
+- 001-docusaurus-setup: Added JavaScript/TypeScript (Node.js v18+ LTS) + Docusaurus 3.x, React 18+, MDX 2.x, Node.js package ecosystem

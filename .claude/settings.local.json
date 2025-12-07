@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.specify/scripts/bash/setup-plan.sh --json)",
+      "Bash(.specify/scripts/bash/update-agent-context.sh claude)",
+      "Bash(.specify/scripts/bash/check-prerequisites.sh --json)",
+      "Bash(.specify/scripts/bash/check-prerequisites.sh --json --require-tasks --include-tasks)",
+      "Bash(git rev-parse --git-dir)",
+      "Bash(node --version)",
+      "Bash(npm --version)",
+      "Bash(npx create-docusaurus@latest . docusaurus --typescript classic --force)",
+      "Bash(npx create-docusaurus@latest . docusaurus --typescript classic)",
+      "Bash(npx create-docusaurus@latest --help)",
+      "Bash(npx create-docusaurus@latest . classic --typescript)",
+      "Bash(rm -rf docs/)",
+      "Bash(mv docusaurus.config.ts docs/docusaurus.config.ts)",
+      "Bash(mkdir -p docs foundations robotics-math control-systems ros2 sensor-fusion simulation ai-agents humanoid-robotics src/components src/pages src/css static/img static/files static/videos i18n/en i18n/ur tests/unit tests/e2e)",
+      "Bash(npm install --save @docusaurus/theme-mermaid)",
+      "Bash(npm run start -- --port=3001)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

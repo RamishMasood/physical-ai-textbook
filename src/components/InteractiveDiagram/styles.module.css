@@ -1,0 +1,58 @@
+.interactiveDiagram {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+
+.diagramHeader {
+  background-color: var(--ifm-color-emphasis-100);
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.diagramHeader:hover {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+.diagramHeader h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.toggleIcon {
+  font-size: 1.2rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.active .toggleIcon {
+  transform: rotate(180deg);
+}
+
+.diagramDescription {
+  padding: 1rem;
+  display: none;
+}
+
+.diagramDescription.active {
+  display: block;
+}
+
+.diagramContent {
+  padding: 0 1rem 1rem;
+  display: none;
+}
+
+.diagramContent.active {
+  display: block;
+}
+
+@media (min-width: 997px) {
+  .diagramContent {
+    padding: 0 1rem 1rem;
+  }
+}

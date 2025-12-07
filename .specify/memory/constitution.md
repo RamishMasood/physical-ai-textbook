@@ -1,55 +1,45 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# Physical AI & Humanoid Robotics Textbook Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Progressive Learning Structure
+Content must be organized from beginner fundamentals to advanced robotics and AI concepts. Each chapter should build upon previous knowledge with clear learning outcomes and summaries. The progression follows: foundations → robotics math → control systems → ROS 2 → sensor fusion → simulation → AI agents → humanoid robotics.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Docusaurus-First Approach
+The textbook must be built using Docusaurus as the primary documentation framework. All content should leverage Docusaurus features for optimal presentation, navigation, and user experience. Content must be structured in a way that supports both web and potential PDF exports.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Multi-Language Support (NON-NEGOTIABLE)
+Content must be designed to support clean translation into Urdu without breaking structure. All headings, code blocks, diagrams, and formatting should preserve their integrity when translated. Use of internationalization (i18n) features in Docusaurus is required.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Quality and Accessibility
+All content must meet high academic standards with proper citations, references, and examples. Content should be accessible to readers with varying technical backgrounds. Code examples must be tested and functional.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Modular Content Design
+Content should be organized in discrete, reusable modules that can stand alone or be combined. Each chapter and section should have clear dependencies and prerequisites. This enables flexible learning paths and curriculum customization.
 
-### [PRINCIPLE_6_NAME]
+### VI. Technical Accuracy
+All technical content must be verified for accuracy. Code examples, mathematical formulas, and technical explanations must be reviewed by domain experts. Regular updates must be planned to keep content current with rapidly evolving AI and robotics fields.
 
+## Content Standards
 
-[PRINCIPLE__DESCRIPTION]
+Content must adhere to academic writing standards with:
+- Clear learning objectives for each chapter
+- Summary sections with key takeaways
+- Practice exercises and problems
+- Proper citations and references
+- Consistent notation and terminology
+- High-quality diagrams and visual aids
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Development Workflow
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- All content changes must follow the Spec-Driven Development approach
+- Each feature/section must have corresponding specs, plans, and tasks
+- Content must be reviewed by technical experts before merging
+- Regular testing of code examples and mathematical content
+- Continuous integration for documentation building and validation
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all other practices for the Physical AI & Humanoid Robotics textbook project. All contributions must comply with these principles. Amendments require documentation, approval from core maintainers, and a migration plan if needed.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-07 | **Last Amended**: 2025-12-07

@@ -1,0 +1,23 @@
+.learningObjectives {
+  border-left: 4px solid var(--ifm-color-primary);
+  background-color: rgba(37, 99, 235, 0.05);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 0.25rem;
+}
+
+.objectiveList {
+  margin-bottom: 0;
+  padding-left: 1rem;
+}
+
+.objectiveItem {
+  margin: 0.5rem 0;
+  list-style-type: disc;
+}
+
+@media (min-width: 997px) {
+  .objectiveItem {
+    list-style-type: disc;
+  }
+}
